@@ -1,24 +1,19 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import Header from "./components/Header";
+import StartGameScreen from "./screens/StartGameScreen";
 
 export default function App() {
-  const [outputText, setOutputText] = useState("Hiiiiii 😄");
   return (
     <View style={styles.container}>
-      <Text>{outputText}</Text>
-      <Button
-        title="Press Here"
-        onPress={() => setOutputText(" انت مبقتش تحبني زي الاول😞 ")}
-      />
+      <Header title="Guess a Number" />
+      <StartGameScreen />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#E8DB72",
-    alignItems: "center",
-    justifyContent: "center"
+    flex: 1
   }
 });
